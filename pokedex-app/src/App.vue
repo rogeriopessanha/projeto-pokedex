@@ -25,10 +25,10 @@ let num = ref(0)
             <router-link class="nav-link" to="/">Home>
             </router-link>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <router-link class="nav-link" to="/about">Sobre>
             </router-link>
-          </li>
+          </li> -->
 
         </ul>
       </div>

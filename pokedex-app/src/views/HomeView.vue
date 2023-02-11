@@ -43,6 +43,7 @@ const selectPokemon = async (pokemon)=>{
           :name="pokemonSelected?.name"
           :xp="pokemonSelected?.base_experience"
           :height="pokemonSelected?.height"
+          :weight="pokemonSelected?.weight"
           :img="pokemonSelected?.sprites.other.dream_world.front_default"
           />
 
@@ -81,5 +82,12 @@ const selectPokemon = async (pokemon)=>{
   max-height: 440px;
   overflow-y: scroll;
   overflow-x: hidden;
+}
+
+@media (max-width:600px){
+  .card-list{
+  max-height: 340px;
+
+}
 }
 </style>
