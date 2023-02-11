@@ -1,8 +1,12 @@
 <script setup>
-import { onMounted } from 'vue';
+import { onMounted, reactive, ref } from 'vue';
+
+let pokemons = reactive(ref())
 
 onMounted(() =>{
-  console.log('oi')
+  fetch("https://pokeapi.co/api/v2/pokemon?limit=251&offset=0")
+  .then(res => res.json())
+  .then(res =>  pokemons.value = res.results)
 })
 </script>
 
@@ -21,7 +25,19 @@ onMounted(() =>{
             </div>
           </div>
         </div>
+
+        <div class="col-sm-12 col-md-6">
+          <div class="card" style="width: 18rem;" >
+            <ul>
+              <li v-for="pokemon in pokemons" :key="pokemon.name">
+                {{ pokemon.name }}
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
+
+
     </div>
   </main>
 </template>
