@@ -11,7 +11,7 @@ let num = ref(0)
     <div class="container-fluid">
 
       <router-link class="navbar-brand" to="/">
-      <img src="assets/pokeball.png" alt="Logo" width="30" height="24" class=".d-inline-block .align-text-top">
+      <img src="./assets/pokeball.png" alt="Logo" width="30" height="24" class=".d-inline-block .align-text-top">
       Pokedex
     </router-link>
 
